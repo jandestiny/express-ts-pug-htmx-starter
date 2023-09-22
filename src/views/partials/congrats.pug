@@ -1,0 +1,25 @@
+title= title
+
+p Congratulations! You have successfully setup express-ts-pug-htmx.
+
+case counter
+    when "1"
+        button(type="button", hx-get='/congrats/2' hx-swap='outerHTML') 
+            | Well done.
+
+    when "2"
+        button(type="button", hx-get='/congrats/3' hx-swap='outerHTML') 
+            | Seems to work pretty well, right?
+
+    when "3"
+        button(type="button", hx-get='/congrats/4' hx-swap='outerHTML') 
+            | Don't overdo it.
+
+    when "4"
+        p(hx-get='/congrats/5', hx-swap='innerHTML') Told you. Have fun, though.
+    
+    when "5"
+        p Okay, now you got me. I'm out of ideas.
+
+    default
+        p #{counter}. I see. You found the default case. Good job.

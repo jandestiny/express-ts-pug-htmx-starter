@@ -1,0 +1,14 @@
+//- Pro-tip: Remember to always include the htmx header for new pages.
+include ./partials/_htmx-header.pug
+
+title= title
+
+body
+    h1 Your first htmx-app. Probably.
+    button(type="button", hx-get='/congrats/1' hx-swap='outerHTML') 
+        | Click Me.
+    hr
+    div 
+        | Created to make your dev-life easier. 🤝 
+        a(href="https://github.com/jandestiny" target="_blank" rel="noopener noreferrer") 
+            | JD on GitHub
